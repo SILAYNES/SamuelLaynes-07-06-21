@@ -1,0 +1,31 @@
+﻿@model AlbumDemo.Web.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Albums</h1>
+</div>
+ <table class="table"> 
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var album in Model.Albums)
+        {
+            <tr>
+                <td>@album.Id</td>
+                <td>@album.Name</td>
+                <td><button type="button" class="btn btn-info">@Model.ActionText</button></td>
+            </tr>
+        }
+        </tbody>
+ </table>
+
+<script>
+
+</script>
